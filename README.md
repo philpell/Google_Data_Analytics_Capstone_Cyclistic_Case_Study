@@ -28,4 +28,9 @@ The study seeks to answer the question: *"How do annual members and casual rider
 
 The business task is therefore to analyse usage patterns between the two groups and use these insights to shape marketing initiatives that increase membership and drive company growth.
 
+## Prepare
+This section provides details of how the data will be downloaded and stored, how it is organised, the sorting and filtering undertaken and what the credibility of the data is.
 
+Two data files, Divvy_trips_2019_Q1 and Divvy_trips_2020_Q1, were downloaded in csv format from the link above before being stored on my personal Google Drive account, which provides data encryption and robust access control.
+
+For each trip taken, both sets of data contained columns with a unique ID, the start and end time (including date), the start and end stations, and the type of customer i.e. annual member or casual rider. The 2019 data contained 365069 records and the 2020 data contained 426887 records.   
