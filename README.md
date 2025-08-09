@@ -12,7 +12,7 @@ The key objectives of this report are to provide:
 5. Provide supporting visualizations and key findings
 6. Provide top three recommendations based on the analysis
 
-# Background
+## Background
 Since 2016, Cyclistic's bike-sharing programme has grown to a fleet of 5,824 geotracked bicycles which can be borrowed and returned to any of Chicago's network of 692 stations. Cyclistic's Unique Selling Point is their range of bikes aimed at people with disabilities and riders who can’t use a standard two-wheeled bike, approximately 8% of riders. Whilst, the majority of users use the bikes for leisure, about 30% use them to commute to work each day. 
 
 Enabled by their flexible pricing plans which offer: single-ride passes, full-day passes, and annual memberships, Cyclistic’s current marketing strategy relies on building general awareness and appealing to broad consumer segments. Customers who purchase single-ride or full-day passes are referred to as casual riders, and those on annual memberships are Cyclistic members. Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Whilst the pricing flexibility helps Cyclistic attract more customers, there is a belief within Cyclistic that maximising the number of annual members will be key to future growth. 
@@ -29,8 +29,9 @@ The study seeks to answer the question: *"How do annual members and casual rider
 The business task is therefore to analyse usage patterns between the two groups and use these insights to shape marketing initiatives that increase membership and drive company growth.
 
 ## Prepare
-This section provides details of how the data will be sourced, stored, organised, sorted, filtered and assessed for credibility.
+This section provides details of how the data will be sourced, stored, organised, and assessed for credibility.
 
+### Sourcing
 The data was sourced from the [divvy_trip](https://divvy-tripdata.s3.amazonaws.com/index.html) repositry, which has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement). Whilst this is public data, data-privacy issues prohibit the use of riders’ personally identifiable information, such as credit card numbers.
 
 ### Storage
@@ -39,4 +40,5 @@ Twelve data files, covering the period between August 2024 to July 2025, were do
 ### Organisation
 For each trip taken, the files contained columns for the unique ride_ID, the bike type, the start and end times, the start and end stations with their latitude and longitude, and the customer type i.e. annual member or casual rider.
 
-### Sorted
+### Credibility
+The data source is Divvy (Chicago’s bike-share system, run by Lyft under CDOT oversight) which publishes the data directly via its site, making it a first-hand, official data source. Whilst the data spans a broad historical range, dating back to around 2013, the data for this study covers the past twelve months, ensuring currency. Furthermore, the clear Divvy Data License Agreement governing data use ensures transparency.   
