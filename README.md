@@ -1,2 +1,2 @@
-# Google_Data_Analytics_Capstone_Cyclistic_Case_Study
-This case will perform data analysis for a fictional bike-share company in order to help them attract more riders. To achieve this, I will perform the typical tasks of a junior data analyst and follow the steps of the data analysis process: Ask, Prepare, Process, Analyze, Share, and Act.
+# Google Data Analytics Capstone Case Study: Cyclistic 
+This case study forms the final part of the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). Throughout the case study, I will undertake data analysis for a fictional bike-share company in order to help them attract more riders. To achieve this, I will perform the typical tasks of a junior data analyst and follow the steps of the data analysis process: Ask, Prepare, Process, Analyze, Share, and Act.
