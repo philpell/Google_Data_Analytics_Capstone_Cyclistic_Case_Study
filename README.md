@@ -58,7 +58,11 @@ Two new columns were added to each CSV file in Excel:
 
 Due to the large number of records in each file, SQL was chosen for further processing instead of Excel. The data covering August 2024 to July 2025 was uploaded into BigQuery, Google’s serverless data warehouse. Because BigQuery’s web UI upload limit is 100 MB per file, some CSV files were split by date before uploading, resulting in 17 files in total.
 
-A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded files. Tables were created with automatically detected schemas. These tables were then combined using the SQL script combined_trip_data.sql (see Appendix) into one table containing all trips between August 2024 and July 2025.
+A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded files. Tables were created with automatically detected schemas. These tables were then combined using the SQL script combined_trip_data.sql (see Appendix 1) into one table containing all trips between August 2024 and July 2025.
 
 During the merge process, BigQuery returned an error because the ride_length column in the nov_2024 table was inferred as STRING instead of TIME, unlike the other tables. Upon review, trips on 3 November in nov_2024 had ended_at values earlier than their started_at values, producing negative durations. BigQuery classified the column as STRING because of these invalid values. I assumed this was due to transposed start and end times and corrected the affected rows by swapping the two values. After this fix, the SQL script executed successfully without errors.
-    
+
+
+
+## Appendix 1 - files
+[combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
