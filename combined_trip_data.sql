@@ -26,7 +26,7 @@ SELECT
 FROM 
     `chrome-theater-456309-n2.cyclistic_bike_share.*`
 WHERE 
-    -- all tables to be included
+    -- A list of all tables to be included using the BigQuery-specific wildcard tables feature _TABLE_SUFFIX
     _TABLE_SUFFIX IN (
         'aug_2024_1', 'aug_2024_2',
         'sept_2024_1', 'sept_2024_2',
@@ -42,14 +42,14 @@ WHERE
         'jul_2025_1', 'jul_2025_2'
     );
 
--- Row count check to verify that merge was successful (To be compared with the sum of all individual tables).
-SELECT COUNT(*) AS total_rows
-FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`;
-
--- Row count by each table to check against imported files.
-SELECT 
-    source_file, 
-    COUNT(*) AS no_of_rows,
+-- A summary of row counts for each original monthly file, plus a grand total.
+-- May be useful for confirming all files contributed the expected number of rows.
+SELECT source_file, COUNT(*) AS no_of_rows
 FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`
 GROUP BY source_file
+
+UNION ALL
+
+SELECT 'TOTAL', COUNT(*) AS no_of_rows
+FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`
 ORDER BY source_file;
