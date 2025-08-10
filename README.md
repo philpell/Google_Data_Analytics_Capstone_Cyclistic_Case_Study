@@ -42,3 +42,16 @@ For each trip taken, the files contained columns for the unique ride_ID, the bik
 
 ### Credibility
 The data source is Divvy (Chicago’s bike-share system, run by Lyft under CDOT oversight) which publishes the data directly via its site, making it a first-hand, official data source. Whilst the data spans a broad historical range, dating back to around 2013, the data for this study covers the past twelve months, ensuring currency. Furthermore, the clear Divvy Data License Agreement governing data use ensures transparency.   
+
+### Bias
+As the data is a record of each trip taken with exclusions, there does not appear to be any bias in the data.
+
+### Problems
+A review of the data, using Microsoft Excel, shows that there are a number of blank entries (NULL values) under the start and end station columns plus the latitude and longitude columns, further review will be required before a decision is made regarding how to process these records. 
+
+## Process
+Two new columns were added to each of csv files using Excel, a ride_length column calculated using ended_at-started_at, and a weekday column calculated using the weekday function.	
+
+Due to the number of records in each file, a decision was made to process the data using SQL, rather than continuing to use Excel. Therefore, the data covering the period between August 2024 to July 2025, were uploaded into BigQuery, Google's serverless data warehouse. Due to an upload limit of 100 mb, some files were split, based on date, to meet this requirement.
+
+The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created using the  
