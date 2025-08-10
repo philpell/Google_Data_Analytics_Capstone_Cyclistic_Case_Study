@@ -52,14 +52,3 @@ SELECT
   COUNTIF(end_lng < -180 OR end_lng > 180) AS invalid_end_lng
 FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`;
 
--- Summarise the row counts for each original monthly file, plus a grand total.
--- Useful to confirm all files contributed data as expected.
-SELECT source_file, COUNT(*) AS rows
-FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`
-GROUP BY source_file
-
-UNION ALL
-
-SELECT 'TOTAL', COUNT(*) AS rows
-FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`
-ORDER BY source_file;
