@@ -7,6 +7,12 @@ GROUP BY ride_id
 HAVING COUNT(*) > 1
 ORDER BY dup_count DESC;
 
+-- Check all ride_id values are the correct length (16 chars)
+SELECT 
+  LENGTH(ride_id) AS ride_id_length
+FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data` 
+GROUP BY LENGTH(ride_id);
+
 -- NULL value count (and % of total) for each key column. High null percentages may indicate missing data problems.
 SELECT
   COUNT(*) AS total_rows,
