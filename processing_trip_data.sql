@@ -16,3 +16,9 @@ SELECT
   COUNTIF(end_lng IS NULL) AS end_lng_nulls,
   COUNTIF(member_casual IS NULL) AS member_casual_nulls
 FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`;
+
+-- Check for duplicates within the ride_id column, this should produce no data
+SELECT ride_id, COUNT(*) AS dup_count
+FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`
+GROUP BY ride_id
+HAVING COUNT(*) > 1;
