@@ -54,4 +54,7 @@ Two new columns were added to each of csv files using Excel, a ride_length colum
 
 Due to the number of records in each file, a decision was made to process the data using SQL, rather than continuing to use Excel. Therefore, the data covering the period between August 2024 to July 2025, were uploaded into BigQuery, Google's serverless data warehouse. Due to an upload limit of 100 mb, some files were split, based on date, to meet this requirement, therefore 17 files were uploaded in total.
 
-The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created with schema automatically assigned.  
+The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created with schema automatically assigned.
+
+When combining the tables, an error was returned due to the ride_length data type of the nov_2024 being a STRING format rather than TIME, as per every other table. Upon review, the data in the nov_2024 table contained trips that ended before the start time, thereby producing a negative time value causing bigQuery to classify the entire column as STRING. To rectify this I assumed there had been a transposition error and reversed the start and end values for all affected trips.
+    
