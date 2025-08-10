@@ -1,32 +1,47 @@
--- As good practice, check for existing table before combining the ride data into a new table
-
+-- Delete the combined table if it already exists
 DROP TABLE IF EXISTS `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`;
 
--- Query to combine the 17 tables with data covering the period between August 2024 to July 2025 into a single table.
+-- Create a new combined table using wildcard tables, this merges all monthly tables from Aug 2024 to Jul 2025 and keeps track of which table each row came from.
+CREATE OR REPLACE TABLE `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data` AS
+SELECT 
+    -- I have explicitly listed columns to ensure schema consistency
+    ride_id, 
+    rideable_type, 
+    started_at, 
+    ended_at,
+    ride_length,	
+    weekday, 
+    start_station_name, 
+    start_station_id, 
+    end_station_name, 
+    end_station_id, 
+    start_lat, 
+    start_lng, 
+    end_lat, 
+    end_lng, 
+    member_casual,
 
-CREATE TABLE IF NOT EXISTS `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data` AS (
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.aug_2024_1` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.aug_2024_2` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.sept_2024_1` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.sept_2024_2` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.oct_2024_1` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.oct_2024_2` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.nov_2024` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.dec_2024` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.jan_2025` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.feb_2025` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.mar_2025` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.apr_2025` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.may_2025` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.jun_2025_1` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.jun_2025_2` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.jul_2025_1` UNION ALL
-  SELECT * FROM `chrome-theater-456309-n2.cyclistic_bike_share.jul_2025_2`
-  );
+    -- Add column to track original table (may be required for debugging)
+    _TABLE_SUFFIX AS source_file
+FROM 
+    `chrome-theater-456309-n2.cyclistic_bike_share.*`
+WHERE 
+    -- all tables to be included
+    _TABLE_SUFFIX IN (
+        'aug_2024_1', 'aug_2024_2',
+        'sept_2024_1', 'sept_2024_2',
+        'oct_2024_1', 'oct_2024_2',
+        'nov_2024', 
+        'dec_2024', 
+        'jan_2025', 
+        'feb_2025', 
+        'mar_2025', 
+        'apr_2025', 
+        'may_2025', 
+        'jun_2025_1', 'jun_2025_2', 
+        'jul_2025_1', 'jul_2025_2'
+    );
 
--- checking no of rows
-
-SELECT COUNT(*)
+-- Row count check to verify that merge was successful (To be compared with the sum of all individual tables).
+SELECT COUNT(*) AS total_rows
 FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`;
-
--- 5611500 returned, this matched the combined individual files indicating all trip data was successfully combined
