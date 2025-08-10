@@ -52,6 +52,6 @@ A review of the data, using Microsoft Excel, shows that there are a number of bl
 ## Process
 Two new columns were added to each of csv files using Excel, a ride_length column calculated using ended_at-started_at, and a weekday column calculated using the weekday function.	
 
-Due to the number of records in each file, a decision was made to process the data using SQL, rather than continuing to use Excel. Therefore, the data covering the period between August 2024 to July 2025, were uploaded into BigQuery, Google's serverless data warehouse. Due to an upload limit of 100 mb, some files were split, based on date, to meet this requirement.
+Due to the number of records in each file, a decision was made to process the data using SQL, rather than continuing to use Excel. Therefore, the data covering the period between August 2024 to July 2025, were uploaded into BigQuery, Google's serverless data warehouse. Due to an upload limit of 100 mb, some files were split, based on date, to meet this requirement, therefore 17 files were uploaded in total.
 
-The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created using the  
+The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created with schema automatically assigned.  
