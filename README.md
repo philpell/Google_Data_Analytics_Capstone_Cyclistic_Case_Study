@@ -56,5 +56,5 @@ Due to the number of records in each file, a decision was made to process the da
 
 The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created with schema automatically assigned.
 
-When combining the tables, an error was returned due to the ride_length data type of the nov_2024 being a STRING format rather than TIME, as per every other table. Upon review, the data in the nov_2024 table contained trips that ended before the start time, thereby producing a negative time value causing bigQuery to classify the entire column as STRING. To rectify this I assumed there had been a transposition error and reversed the start and end values for all affected trips.
+When combining the tables, an error was returned due to the ride_length data type of the nov_2024 being a STRING format rather than TIME, as per every other table. Upon review, the data for the 3rd November in the nov_2024 table contained trips that ended before the start time, thereby producing a negative time value causing bigQuery to classify the entire column as STRING. To rectify this I assumed there had been a transposition error and reversed the start and end values for all affected trips.
     
