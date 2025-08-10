@@ -50,7 +50,6 @@ FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`;
 SELECT 
     source_file, 
     COUNT(*) AS no_of_rows,
-    COUNT(*) AS total_rows
 FROM `chrome-theater-456309-n2.cyclistic_bike_share.combined_ride_data`
 GROUP BY source_file
 ORDER BY source_file;
