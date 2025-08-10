@@ -50,11 +50,15 @@ As the data is a record of each trip taken with exclusions, there does not appea
 A review of the data, using Microsoft Excel, shows that there are a number of blank entries (NULL values) under the start and end station columns plus the latitude and longitude columns, further review will be required before a decision is made regarding how to process these records. 
 
 ## Process
-Two new columns were added to each of csv files using Excel, a ride_length column calculated using ended_at-started_at, and a weekday column calculated using the weekday function.	
+Two new columns were added to each CSV file in Excel:
 
-Due to the number of records in each file, a decision was made to process the data using SQL, rather than continuing to use Excel. Therefore, the data covering the period between August 2024 to July 2025, were uploaded into BigQuery, Google's serverless data warehouse. Due to an upload limit of 100 mb, some files were split, based on date, to meet this requirement, therefore 17 files were uploaded in total.
+    ride_length, calculated as ended_at - started_at
 
-The first stage was to create a Cyclistic bike-share dataset folder within BigQuery, this will be used to hold the csv files. Tables were then created with schema automatically assigned.
+    weekday, calculated using Excel’s WEEKDAY function.
 
-When combining the tables, an error was returned due to the ride_length data type of the nov_2024 being a STRING format rather than TIME, as per every other table. Upon review, the data for the 3rd November in the nov_2024 table contained trips that ended before the start time, thereby producing a negative time value causing bigQuery to classify the entire column as STRING. To rectify this I assumed there had been a transposition error and reversed the start and end values for all affected trips.
+Due to the large number of records in each file, SQL was chosen for further processing instead of Excel. The data covering August 2024 to July 2025 was uploaded into BigQuery, Google’s serverless data warehouse. Because BigQuery’s web UI upload limit is 100 MB per file, some CSV files were split by date before uploading, resulting in 17 files in total.
+
+A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded files. Tables were created with automatically detected schemas. These tables were then combined using the SQL script combined_trip_data.sql (see Appendix) into one table containing all trips between August 2024 and July 2025.
+
+During the merge process, BigQuery returned an error because the ride_length column in the nov_2024 table was inferred as STRING instead of TIME, unlike the other tables. Upon review, trips on 3 November in nov_2024 had ended_at values earlier than their started_at values, producing negative durations. BigQuery classified the column as STRING because of these invalid values. I assumed this was due to transposed start and end times and corrected the affected rows by swapping the two values. After this fix, the SQL script executed successfully without errors.
     
