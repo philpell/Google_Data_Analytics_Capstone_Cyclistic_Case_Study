@@ -50,17 +50,18 @@ As the data is a record of each trip taken with exclusions, there does not appea
 A review of the data, using Microsoft Excel, shows that there are a number of blank entries (NULL values) under the start and end station columns plus the latitude and longitude columns, further review will be required before a decision is made regarding how to process these records. 
 
 ## Process
-Two new columns were added to each CSV file in Excel:
+In accordance with the requirements of the course, two new columns were added to each CSV file in Excel:
 
-    ride_length, calculated as ended_at - started_at
+    - ride_length, calculated as ended_at - started_at
+    - weekday, calculated using Excel’s WEEKDAY function.
 
-    weekday, calculated using Excel’s WEEKDAY function.
+HOwever, due to the large number of records in each file, SQL was chosen for further processing instead of Excel. The data covering August 2024 to July 2025 was uploaded into BigQuery, Google’s serverless data warehouse. Because BigQuery’s web UI upload limit is 100 MB per file, some CSV files were split by date before uploading, resulting in 17 files in total.
 
-Due to the large number of records in each file, SQL was chosen for further processing instead of Excel. The data covering August 2024 to July 2025 was uploaded into BigQuery, Google’s serverless data warehouse. Because BigQuery’s web UI upload limit is 100 MB per file, some CSV files were split by date before uploading, resulting in 17 files in total.
+A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded files. Tables were created with schemas automatically detected. These tables were then combined into one table and checked using the SQL script combined_trip_data.sql (see Appendix 1). During the merge process, BigQuery returned an error because the ride_length column in the nov_2024 table was inferred as STRING instead of TIME, unlike all other tables. Upon review, trips on 3 November in nov_2024 had ended_at values earlier than their started_at values, producing negative durations. BigQuery classified the column as STRING because of these invalid values. I assumed this was due to transposed start and end times and corrected the affected rows by exchanging the two values. After this fix, the SQL script executed successfully without errors to produce a combined table contained 5,611,500 rows, matching the sum of the individual files.
 
-A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded files. Tables were created with automatically detected schemas. These tables were then combined using the SQL script combined_trip_data.sql (see Appendix 1) into one table containing all trips between August 2024 and July 2025.
+Data validation checks were then performed, including row counts per source file, null value counts for all columns, and identification of invalid entries such as negative or excessively long trip durations, start and end times in the wrong order, and out-of-range GPS coordinates using the SQL script processing_trip_data.sql (see Appendix 1). The cleaning process used the SQL script cleaning_trip_data.sql (see Appendix 1) to remove rows with missing essential fields (ride_id, started_at, ended_at, member_casual, rideable_type, end_lat, end_long), filtered trips outside valid time and coordinate ranges, and standardised categorical values to lowercase with trimmed spaces. The final cleaned dataset contained 5,523,105 rows. 
 
-During the merge process, BigQuery returned an error because the ride_length column in the nov_2024 table was inferred as STRING instead of TIME, unlike the other tables. Upon review, trips on 3 November in nov_2024 had ended_at values earlier than their started_at values, producing negative durations. BigQuery classified the column as STRING because of these invalid values. I assumed this was due to transposed start and end times and corrected the affected rows by swapping the two values. After this fix, the SQL script executed successfully without errors.
+## Analysis
 
 
 
