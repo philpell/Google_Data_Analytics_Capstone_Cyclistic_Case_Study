@@ -67,5 +67,7 @@ The cleaned_ride_data table was downloaded from BigQuery in csv format and then 
 
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
+
 [processing_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/processing_trip_data.sql)
+
 [cleaning_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/cleaning_trip_data.sql)
