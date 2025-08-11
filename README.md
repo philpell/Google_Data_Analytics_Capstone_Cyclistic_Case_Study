@@ -62,7 +62,8 @@ A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded file
 Data validation checks were then performed, including row counts per source file, null value counts for all columns, and identification of invalid entries such as negative or excessively long trip durations, start and end times in the wrong order, and out-of-range GPS coordinates using the SQL script processing_trip_data.sql (see Appendix 1). The cleaning process used the SQL script cleaning_trip_data.sql (see Appendix 1) to remove rows with missing essential fields (ride_id, started_at, ended_at, member_casual, rideable_type, end_lat, end_long), filtered trips outside valid time and coordinate ranges, and standardised categorical values to lowercase with trimmed spaces. The final cleaned dataset contained 5,523,105 rows, therefore 88,395 rows were removed during the cleaning process. 
 
 ## Analysis
-The cleaned_ride_data table was downloaded from BigQuery in csv format and then uploaded into Tableau Public for analysis. 
+The cleaned_ride_data table was downloaded from BigQuery in csv format and then uploaded into Tableau Public for analysis, with the aim of answering the question: *"How do annual members and casual riders use Cyclistic bikes differently?"*
+
 
 
 ## Appendix 1 - files
