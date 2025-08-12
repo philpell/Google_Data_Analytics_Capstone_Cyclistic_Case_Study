@@ -102,7 +102,7 @@ The weekly usage chart shows a trend for higher usage on Saturday and Sunday for
     <img width="1165" height="463" alt="image" src="https://github.com/user-attachments/assets/a195fda3-948c-47ca-9988-a36e661f8876" />
 </p>
 
-The daily chart shows that casual usage increases throughout the day before peaking and falling at 5pm. Member usage shows two peaks, one at 8am and the highest at 5pm, usage falls between these points but remains higher than casual riders. 
+The daily chart shows that casual usage increases throughout the day before peaking and falling at 17:00. Member usage shows two peaks, one at 8:00 and the highest at 17:00, usage falls between these points but remains higher than casual riders. 
 
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
