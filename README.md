@@ -189,7 +189,13 @@ The analysis above shows the following:
     This data supports dynamic pricing or targeted promotions at off-peak times.
 
 ## Act
-To capitalise on the findings, Cyclistic should design targeted campaigns to convert casual riders into members by promoting the cost savings and convenience of memberships, especially for those riding on weekdays. Marketing efforts could emphasise commuter benefits to encourage regular travel, while seasonal promotions in peak summer months could attract high leisure-use casual riders. Expanding station coverage and accessibility around high-demand leisure areas may further encourage casual riders to commit, while maintaining strong service in commuter hubs will retain and grow the member base. Additionally, tailored incentives, such as trial memberships or bundled offers for electric bike usage, could bridge the gap between casual and member behaviours, driving both customer loyalty and profitability.
+Based on the report findings, the top three recommendations are:
+
+1. Target commuter-focused marketing to casual riders – Promote the cost savings, reliability, and convenience of memberships to casual riders who ride on weekdays, positioning memberships as the smart choice for regular travel.
+
+2. Leverage seasonal and leisure trends – Launch promotional campaigns during peak summer months and weekends, especially around central Chicago and popular leisure destinations, to capture high-demand casual users.
+
+3. Offer electric bike–focused incentives – Since electric bikes are the most popular rideable for both groups, introduce targeted incentives such as discounted upgrades, free trial days, or member-only perks to encourage casual riders to commit.
 
 ## Appendix 1 - files
 
