@@ -69,7 +69,8 @@ The following are visualisation taken from Tableau that show the key metrics for
 ### Casual riders to Cyclistic member breakdown:
 
 <p align="center">
-  <img width="690" height="454" alt="image" src="https://github.com/user-attachments/assets/88154112-e2cd-4b00-94b1-7b915618ba83" />
+
+  <img width="690" height="454" alt="image" src="https://github.com/user-attachments/assets/d45cefc9-8477-4cbf-af18-4a548a13e14c" />
 </p>
 
 Throughout the 12 month period, members account for almost two thirds (63.63%) of all cycle trips, highlighting the importance of this market. 
@@ -78,7 +79,7 @@ Throughout the 12 month period, members account for almost two thirds (63.63%) o
 Cyclistic currently offer three types of rideables: Classic bikes, electric bikes and electric scooters. The following provides a breakdown of how these are used by the two user types:
 
 <p align="center">
-    <img width="1159" height="462" alt="image" src="https://github.com/user-attachments/assets/d45cefc9-8477-4cbf-af18-4a548a13e14c" />
+  <img width="1160" height="457" alt="image" src="https://github.com/user-attachments/assets/757d66c8-d3fa-45e1-a8a9-f8e267c8aecd" />
 </p>
 
 The chart shows that electric bikes are the most popular rideable for both types of user.
