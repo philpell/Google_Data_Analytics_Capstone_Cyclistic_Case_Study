@@ -142,25 +142,25 @@ The trend for both end station maps is similar to the start stations with the ma
 
 ## Insights
 The analysis above shows the following:
-1. Membership vs. Casual Usage Patterns
+1. Cyclistic member vs. Casual rider usage patterns
 
-    Members dominate ridership — they account for 63.63% of all trips over the year.
+    Members dominate ridership, accounting for 63.63% of all trips over the year.
 
     This confirms that annual members are the company’s most important customer base, but also highlights a significant opportunity to convert high-usage casual riders into members.
 
-2. Rideable Preferences
+2. Rideable preferences
 
     Electric bikes are the most popular for both groups, suggesting this is a universal preference regardless of membership status.
 
     Marketing campaigns could focus on the benefits of unlimited electric bike usage for members.
 
-3. Seasonal Trends
+3. Seasonal trends
 
     Both groups peak in September, with consistently high usage from June to September, and lowest usage in January.
 
     This seasonality indicates opportunities for targeted pre-summer membership campaigns to capture riders before peak season.
 
-4. Weekly & Daily Patterns
+4. Weekly & daily patterns
 
     Casual riders show higher activity on weekends, pointing to leisure-focused trips.
 
@@ -168,27 +168,31 @@ The analysis above shows the following:
 
     Marketing messaging for casual riders could highlight weekend trip benefits of a membership, while for commuters, emphasise cost savings and reliability.
 
-5. Ride Duration
+5. Ride duration
 
     Casual riders take longer trips (avg. 20.0 min) compared to members (avg. 11.9 min), across all time periods.
 
-    The largest gaps appear in summer weekends — potentially an upsell opportunity for “extended ride” benefits in membership packages.
+    The largest gaps appear in summer weekends, potentially an upsell opportunity for “extended ride” benefits in membership packages.
 
-6. Station Usage Clusters
+6. Station usage clusters
 
     Casual riders concentrate around central Chicago and extend northwards to leisure spots like Montrose Beach.
 
     Members use a broader network including southern locations like the University of Chicago campus, indicating more diverse trip purposes.
 
-    This could influence station placement, bike allocation, and geo-targeted marketing.
+    This could influence station placement, bike allocation, and geo-targeted marketing such as students.
 
 7. Operational Opportunities
 
-    Knowing peak hours for each user type can help reallocate bikes and maintenance crews to match demand (e.g., members peak at 8 AM and 5 PM; casual riders late morning to early evening).
+    Knowing peak hours for each user type can help reallocate bikes and maintenance crews to match demand, e.g. members peak at 8 AM and 5 PM; casual riders late morning to early evening.
 
-    Data supports dynamic pricing or targeted promotions at off-peak times.
+    This data supports dynamic pricing or targeted promotions at off-peak times.
+
+## Summary
+The analysis reveals clear behavioural differences between Cyclistic’s annual members and casual riders. Members, who make up nearly two-thirds of all trips, display consistent, commute-oriented usage patterns, with weekday peaks at 8 AM and 5 PM, shorter average ride durations, and broader station coverage across the city, including commuter hubs in the south. In contrast, casual riders tend to be leisure-focused, taking longer trips, riding more on weekends, and concentrating around central and northern recreational areas. Both groups show strong seasonal demand between June and September, with electric bikes being the most popular rideable type. These distinctions highlight opportunities to convert casual riders into members by tailoring offers to their leisure habits and promoting commuter benefits to those riding on weekdays.
 
 Appendix 1 - files
+
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
 
 [processing_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/processing_trip_data.sql)
