@@ -135,6 +135,8 @@ The following maps show the distribution of stations where 10,000 rides or more 
 
 The maps show casual riders predominantly use stations concentrated around central Chicago, with further stations extending to northern leisure areas such as Montrose Beach. Members have similar central core but with broader distribution, including more northern stations and notable southern clusters (University of Chicago and Illinois Institute of Technology).
 
+The full dashboard is available on [Tableau Public](https://public.tableau.com/app/profile/philip.pell7813/viz/Cyclistic_analysis_17550165927920/Overview)
+
 ## Share
 The analysis above shows the following:
 1. Cyclistic member vs. Casual rider usage patterns
