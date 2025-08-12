@@ -64,7 +64,11 @@ Data validation checks were then performed, including row counts per source file
 ## Analysis
 The cleaned_ride_data table was downloaded from BigQuery in csv format and then uploaded into Tableau Public for analysis, with the aim of answering the question: *"How do annual members and casual riders use Cyclistic bikes differently?"*
 
+The following are visualisation taken from Tableau that show the key metrics for the August 2024 to July 2025 period:
 
+The casual riders to Cyclistic member breakdown: 
+<img width="690" height="454" alt="image" src="https://github.com/user-attachments/assets/88154112-e2cd-4b00-94b1-7b915618ba83" />
+Throughout the 12 month period, members account for almost two thirds (63.63%) of all cycle trips, highlighting the importance of this market. 
 
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
