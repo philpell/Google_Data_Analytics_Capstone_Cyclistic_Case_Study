@@ -104,6 +104,27 @@ The weekly usage chart shows a trend for higher usage on Saturday and Sunday for
 
 The daily chart shows that casual usage increases throughout the day before peaking and falling at 17:00. Member usage shows two peaks, one at 8:00 and the highest at 17:00, usage falls between these points but remains higher than casual riders. 
 
+### Ride duration
+The average ride duration is 20 and 11.9 minutes for casual and member users respectively. The following three charts provide an overview of the average ride durtion by both user types by monthly, weekly and daily periods:
+
+<p align="center">
+    <img width="1163" height="464" alt="image" src="https://github.com/user-attachments/assets/02620721-6e24-4ec1-a8ae-79b0b5a01c8e" />
+</p>
+
+The monthly duration chart shows that casual users consistantly take longer rides than members. Amongst casual users, August has the highest average ride duration of 22.3 minutes and January, at 12 minutes, has the lowest, a range of 10.3 minutes. The average ride duration for members remains relatively consistant throughout the year with July having the highest of 13.1 minutes and January and February having the joint lowest of 9.9 minutes, a range of 3.2 minutes.   
+
+<p align="center">
+    <img width="1163" height="464" alt="image" src="https://github.com/user-attachments/assets/f55827da-c788-4aad-b8b0-efecc9637f40" />
+</p>
+
+The daily average ride duration chart shows casual riders take longer rides on Saturday and Sunday, 22.7 and 23.1 minutes respectively. Wednesday has the lowest average ride duration amounst casual riders at 17 minutes, a range of 6.1 minutes. The average ride length also peaks on Saturday and Sunday for members, 13.1 and 13.2 minutes respectively. From Monday to Friday, values remain constant, with all values falling between 11.4 and 11.9 minutes, a total range of 1.8 minutes. 
+
+<p align="center">
+    <img width="1165" height="466" alt="image" src="https://github.com/user-attachments/assets/21b273f3-a2a2-4e6c-8edc-ba8cd3f0f480" />
+</p>
+
+The hourly chart shows casual users are taking the shortest rides between 3 and 8am with 6am (06:00) being the shortest at 13.3 minutes, ride duration increases to the highest of 24.3 minutes at 11am (11:00) before falling steadily. Member ride duration remains steady throughout the day, ranging from 10.7 minutes at 5am (05:00) to 12.8 minutes at 5pm (17:00).  
+
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
 
