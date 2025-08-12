@@ -4,13 +4,13 @@ This case study forms the final part of the [Google Data Analytics Professional 
 ## Aims and Objectives
 This report aims to provide evidence-based insights which will help Cyclistic's marketing team in understanding *"How do annual members and casual riders use Cyclistic bikes differently?"*
 
-The key objectives of this report are to provide:
-1. A clear statement of the business task
-2. A description of all data sources used
-3. Documentation of any cleaning or manipulation of data
-4. A summary of the analysis undertaken
+The key objectives of this report are to:
+1. Provide a clear statement of the business task
+2. Provide a description of all data sources used
+3. Provide documentation of any cleaning or manipulation of data
+4. Provide a summary of the analysis undertaken
 5. Provide supporting visualizations and key findings
-6. Provide top three recommendations based on the analysis
+6. Provide the top three recommendations based on the analysis
 
 ## Background
 Since 2016, Cyclistic's bike-sharing programme has grown to a fleet of 5,824 geotracked bicycles which can be borrowed and returned to any of Chicago's network of 692 stations. Cyclistic's Unique Selling Point is their range of bikes aimed at people with disabilities and riders who can’t use a standard two-wheeled bike, approximately 8% of riders. Whilst, the majority of users use the bikes for leisure, about 30% use them to commute to work each day. 
@@ -19,7 +19,7 @@ Enabled by their flexible pricing plans which offer: single-ride passes, full-da
 
 Rather than creating a marketing campaign that targets all-new customers, Cyclistic’s director of marketing, Lily Moreno, believes there is a solid opportunity to convert casual riders into members, as they are already aware of the Cyclistic programme and have chosen Cyclistic for their mobility needs. To design marketing strategies aimed at converting casual riders into annual members, the marketing team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics.
 
-The subsquent sections will follow the steps of the data analysis process: Ask, Prepare, Process, Analyze, Share, and Act.
+The subsequent sections will follow the steps of the data analysis process: Ask, Prepare, Process, Analyze, Share, and Act.
 
 ## Ask
 This section outlines the problem to be solved, the business task, and how the resulting insights can drive decisions.
@@ -55,7 +55,7 @@ In accordance with the requirements of the course, two new columns were added to
     - ride_length, calculated as ended_at - started_at
     - weekday, calculated using Excel’s WEEKDAY function.
 
-HOwever, due to the large number of records in each file, SQL was chosen for further processing instead of Excel. The data covering August 2024 to July 2025 was uploaded into BigQuery, Google’s serverless data warehouse. Because BigQuery’s web UI upload limit is 100 MB per file, some CSV files were split by date before uploading, resulting in 17 files in total.
+However, due to the large number of records in each file, SQL was chosen for further processing instead of Excel. The data covering August 2024 to July 2025 was uploaded into BigQuery, Google’s serverless data warehouse. Because BigQuery’s web UI upload limit is 100 MB per file, some CSV files were split by date before uploading, resulting in 17 files in total.
 
 A Cyclistic bike-share dataset was created in BigQuery to hold the uploaded files. Tables were created with schemas automatically detected. These tables were then combined into one table and checked using the SQL script combined_trip_data.sql (see Appendix 1). During the merge process, BigQuery returned an error because the ride_length column in the nov_2024 table was inferred as STRING instead of TIME, unlike all other tables. Upon review, trips on 3 November in nov_2024 had ended_at values earlier than their started_at values, producing negative durations. BigQuery classified the column as STRING because of these invalid values. I assumed this was due to transposed start and end times and corrected the affected rows by exchanging the two values. After this fix, the SQL script executed successfully without errors to produce a combined table contained 5,611,500 rows, matching the sum of the individual files.
 
@@ -105,19 +105,19 @@ The weekly usage chart shows a trend for higher usage on Saturday and Sunday for
 The daily chart shows that casual usage increases throughout the day before peaking and falling at 17:00. Member usage shows two peaks, one at 8:00 and the highest at 17:00, usage falls between these points but remains higher than casual riders. 
 
 ### Ride duration
-The average ride duration is 20 and 11.9 minutes for casual and member users respectively. The following three charts provide an overview of the average ride durtion by both user types by monthly, weekly and daily periods:
+The average ride duration is 20 and 11.9 minutes for casual and member users respectively. The following three charts provide an overview of the average ride duration by both user types by monthly, weekly and daily periods:
 
 <p align="center">
     <img width="1163" height="464" alt="image" src="https://github.com/user-attachments/assets/02620721-6e24-4ec1-a8ae-79b0b5a01c8e" />
 </p>
 
-The monthly duration chart shows that casual users consistantly take longer rides than members. Amongst casual users, August has the highest average ride duration of 22.3 minutes and January, at 12 minutes, has the lowest, a range of 10.3 minutes. The average ride duration for members remains relatively consistant throughout the year with July having the highest of 13.1 minutes and January and February having the joint lowest of 9.9 minutes, a range of 3.2 minutes.   
+The monthly duration chart shows that casual users consistently take longer rides than members. Amongst casual users, August has the highest average ride duration of 22.3 minutes and January, at 12 minutes, has the lowest, a range of 10.3 minutes. The average ride duration for members remains relatively consistant throughout the year with July having the highest of 13.1 minutes and January and February having the joint lowest of 9.9 minutes, a range of 3.2 minutes.   
 
 <p align="center">
     <img width="1163" height="464" alt="image" src="https://github.com/user-attachments/assets/f55827da-c788-4aad-b8b0-efecc9637f40" />
 </p>
 
-The daily average ride duration chart shows casual riders take longer rides on Saturday and Sunday, 22.7 and 23.1 minutes respectively. Wednesday has the lowest average ride duration amounst casual riders at 17 minutes, a range of 6.1 minutes. The average ride length also peaks on Saturday and Sunday for members, 13.1 and 13.2 minutes respectively. From Monday to Friday, values remain constant, with all values falling between 11.4 and 11.9 minutes, a total range of 1.8 minutes. 
+The daily average ride duration chart shows casual riders take longer rides on Saturday and Sunday, 22.7 and 23.1 minutes respectively. Wednesday has the lowest average ride duration amoungst casual riders at 17 minutes, a range of 6.1 minutes. The average ride length also peaks on Saturday and Sunday for members, 13.1 and 13.2 minutes respectively. From Monday to Friday, values remain constant, with all values falling between 11.4 and 11.9 minutes, a total range of 1.8 minutes. 
 
 <p align="center">
     <img width="1165" height="466" alt="image" src="https://github.com/user-attachments/assets/21b273f3-a2a2-4e6c-8edc-ba8cd3f0f480" />
@@ -139,6 +139,54 @@ The maps showing start stations shows that the main cluster of stations for casu
 </p>
 
 The trend for both end station maps is similar to the start stations with the main cluster for casual users being around central Chicago and further stations stretching to the north. For members, in addition to clusters around the central Chicago, the north, and around the university of Chicago campus, there is an additional station at the Illinois Institute of Technology.  
+
+## Insights
+The analysis above shows the following:
+1. Membership vs. Casual Usage Patterns
+
+    Members dominate ridership — they account for 63.63% of all trips over the year.
+
+    This confirms that annual members are the company’s most important customer base, but also highlights a significant opportunity to convert high-usage casual riders into members.
+
+2. Rideable Preferences
+
+    Electric bikes are the most popular for both groups, suggesting this is a universal preference regardless of membership status.
+
+    Marketing campaigns could focus on the benefits of unlimited electric bike usage for members.
+
+3. Seasonal Trends
+
+    Both groups peak in September, with consistently high usage from June to September, and lowest usage in January.
+
+    This seasonality indicates opportunities for targeted pre-summer membership campaigns to capture riders before peak season.
+
+4. Weekly & Daily Patterns
+
+    Casual riders show higher activity on weekends, pointing to leisure-focused trips.
+
+    Members ride more Monday–Friday, likely reflecting commuting patterns.
+
+    Marketing messaging for casual riders could highlight weekend trip benefits of a membership, while for commuters, emphasise cost savings and reliability.
+
+5. Ride Duration
+
+    Casual riders take longer trips (avg. 20.0 min) compared to members (avg. 11.9 min), across all time periods.
+
+    The largest gaps appear in summer weekends — potentially an upsell opportunity for “extended ride” benefits in membership packages.
+
+6. Station Usage Clusters
+
+    Casual riders concentrate around central Chicago and extend northwards to leisure spots like Montrose Beach.
+
+    Members use a broader network including southern locations like the University of Chicago campus, indicating more diverse trip purposes.
+
+    This could influence station placement, bike allocation, and geo-targeted marketing.
+
+7. Operational Opportunities
+
+    Knowing peak hours for each user type can help reallocate bikes and maintenance crews to match demand (e.g., members peak at 8 AM and 5 PM; casual riders late morning to early evening).
+
+    Data supports dynamic pricing or targeted promotions at off-peak times.
 
 Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
