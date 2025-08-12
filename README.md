@@ -74,6 +74,15 @@ The following are visualisation taken from Tableau that show the key metrics for
 
 Throughout the 12 month period, members account for almost two thirds (63.63%) of all cycle trips, highlighting the importance of this market. 
 
+### Rideable choice
+Cyclistic currently offer three types of rideables: Classic bikes, electric bikes and electric scooters. The following provides a breakdown of how these are used by the two user types:
+
+<p align="center">
+    <img width="1159" height="462" alt="image" src="https://github.com/user-attachments/assets/93dcbe39-3b00-49a6-9a0f-c14daa50ae52" />
+</p>
+
+The chart shows that electric bikes are the most popular rideable for both types of user.
+
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
 
