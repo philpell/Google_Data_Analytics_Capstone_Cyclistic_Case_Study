@@ -83,6 +83,21 @@ Cyclistic currently offer three types of rideables: Classic bikes, electric bike
 
 The chart shows that electric bikes are the most popular rideable for both types of user.
 
+### Breakdown of usage
+The following three charts provide an overview of the usage by both user types over annual, weekly and daily periods:
+
+<p align="center">
+    <img width="1163" height="465" alt="image" src="https://github.com/user-attachments/assets/b66a5bf6-0799-4053-863f-075eb37b9c1c" />
+</p>
+
+<p align="center">
+    <img width="1162" height="462" alt="image" src="https://github.com/user-attachments/assets/552b403b-6b28-4868-9198-099738344fab" />
+</p>
+
+<p align="center">
+    <img width="1165" height="463" alt="image" src="https://github.com/user-attachments/assets/a195fda3-948c-47ca-9988-a36e661f8876" />
+</p>
+
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
 
