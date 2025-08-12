@@ -91,7 +91,7 @@ The following three charts provide an overview of the usage by both user types o
 </p>
 
 <p align="center">
-    <img width="1162" height="462" alt="image" src="https://github.com/user-attachments/assets/552b403b-6b28-4868-9198-099738344fab" />
+    <img width="1163" height="462" alt="image" src="https://github.com/user-attachments/assets/1d1b135f-7527-430e-9922-4424f0e248df" />
 </p>
 
 <p align="center">
