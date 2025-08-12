@@ -130,16 +130,10 @@ The hourly chart shows casual users are taking the shortest rides between 3 and 
 The following maps show the distribution of stations where 10,000 rides or more either started or ended, this is also split by user type:
 
 <p align="center">
-    <img width="1159" height="464" alt="image" src="https://github.com/user-attachments/assets/ae5a4c03-f375-4347-bc1f-2431f25be401" />
+  <img width="1143" height="395" alt="image" src="https://github.com/user-attachments/assets/e2f257fe-f52c-4a78-a66c-61579180b776" />
 </p>
 
-The maps showing start stations shows that the main cluster of stations for casual users is around central Chicago, with five further stations stretching to the north as far as the Montrose Beach area. For members, there is also a main cluster around the central Chicago area with stations spreading to the north, however the number of stations is greater than the casual rider map. In addition, there is also a small cluster or stations located in the south, around the university of Chicago campus.  
-
-<p align="center">
-    <img width="974" height="462" alt="image" src="https://github.com/user-attachments/assets/ce3dc567-f993-4864-a17e-d5fdaeebc22c" />
-</p>
-
-The trend for both end station maps is similar to the start stations with the main cluster for casual users being around central Chicago and further stations stretching to the north. For members, in addition to clusters around the central Chicago, the north, and around the university of Chicago campus, there is an additional station at the Illinois Institute of Technology.  
+The maps show casual riders predominantly use stations concentrated around central Chicago, with further stations extending to northern leisure areas such as Montrose Beach. Members have similar central core but with broader distribution, including more northern stations and notable southern clusters (University of Chicago and Illinois Institute of Technology).
 
 ## Share
 The analysis above shows the following:
