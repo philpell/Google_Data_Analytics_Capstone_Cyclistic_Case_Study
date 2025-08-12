@@ -66,9 +66,11 @@ The cleaned_ride_data table was downloaded from BigQuery in csv format and then 
 
 The following are visualisation taken from Tableau that show the key metrics for the August 2024 to July 2025 period:
 
-#### Casual riders to Cyclistic member breakdown:
+### Casual riders to Cyclistic member breakdown:
 
-<img width="690" height="454" alt="image" item_align="center" src="https://github.com/user-attachments/assets/88154112-e2cd-4b00-94b1-7b915618ba83" />
+<p align="center">
+  <img width="690" height="454" alt="image" src="https://github.com/user-attachments/assets/88154112-e2cd-4b00-94b1-7b915618ba83" />
+</p>
 
 Throughout the 12 month period, members account for almost two thirds (63.63%) of all cycle trips, highlighting the importance of this market. 
 
