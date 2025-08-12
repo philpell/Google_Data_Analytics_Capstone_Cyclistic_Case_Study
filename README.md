@@ -124,8 +124,23 @@ The daily average ride duration chart shows casual riders take longer rides on S
 </p>
 
 The hourly chart shows casual users are taking the shortest rides between 3 and 8am with 6am (06:00) being the shortest at 13.3 minutes, ride duration increases to the highest of 24.3 minutes at 11am (11:00) before falling steadily. Member ride duration remains steady throughout the day, ranging from 10.7 minutes at 5am (05:00) to 12.8 minutes at 5pm (17:00).  
+### Stations
 
-## Appendix 1 - files
+The following maps show the distribution of stations where 10,000 rides or more either started or ended, this is also split by user type:
+
+<p align="center">
+    <img width="1159" height="464" alt="image" src="https://github.com/user-attachments/assets/ae5a4c03-f375-4347-bc1f-2431f25be401" />
+</p>
+
+The maps showing start stations shows that the main cluster of stations for casual users is around central Chicago, with five further stations stretching to the north as far as the Montrose Beach area. For members, there is also a main cluster around the central Chicago area with stations spreading to the north, however the number of stations is greater than the casual rider map. In addition, there is also a small cluster or stations located in the south, around the university of Chicago campus.  
+
+<p align="center">
+    <img width="974" height="462" alt="image" src="https://github.com/user-attachments/assets/ce3dc567-f993-4864-a17e-d5fdaeebc22c" />
+</p>
+
+The trend for both end station maps is similar to the start stations with the main cluster for casual users being around central Chicago and further stations stretching to the north. For members, in addition to clusters around the central Chicago, the north, and around the university of Chicago campus, there is an additional station at the Illinois Institute of Technology.  
+
+Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
 
 [processing_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/processing_trip_data.sql)
