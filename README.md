@@ -140,7 +140,7 @@ The maps showing start stations shows that the main cluster of stations for casu
 
 The trend for both end station maps is similar to the start stations with the main cluster for casual users being around central Chicago and further stations stretching to the north. For members, in addition to clusters around the central Chicago, the north, and around the university of Chicago campus, there is an additional station at the Illinois Institute of Technology.  
 
-## Insights
+## Share
 The analysis above shows the following:
 1. Cyclistic member vs. Casual rider usage patterns
 
@@ -188,10 +188,10 @@ The analysis above shows the following:
 
     This data supports dynamic pricing or targeted promotions at off-peak times.
 
-## Summary
-The analysis reveals clear behavioural differences between Cyclistic’s annual members and casual riders. Members, who make up nearly two-thirds of all trips, display consistent, commute-oriented usage patterns, with weekday peaks at 8 AM and 5 PM, shorter average ride durations, and broader station coverage across the city, including commuter hubs in the south. In contrast, casual riders tend to be leisure-focused, taking longer trips, riding more on weekends, and concentrating around central and northern recreational areas. Both groups show strong seasonal demand between June and September, with electric bikes being the most popular rideable type. These distinctions highlight opportunities to convert casual riders into members by tailoring offers to their leisure habits and promoting commuter benefits to those riding on weekdays.
+## Act
+To capitalise on the findings, Cyclistic should design targeted campaigns to convert casual riders into members by promoting the cost savings and convenience of memberships, especially for those riding on weekdays. Marketing efforts could emphasise commuter benefits to encourage regular travel, while seasonal promotions in peak summer months could attract high leisure-use casual riders. Expanding station coverage and accessibility around high-demand leisure areas may further encourage casual riders to commit, while maintaining strong service in commuter hubs will retain and grow the member base. Additionally, tailored incentives, such as trial memberships or bundled offers for electric bike usage, could bridge the gap between casual and member behaviours, driving both customer loyalty and profitability.
 
-Appendix 1 - files
+## Appendix 1 - files
 
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
 
