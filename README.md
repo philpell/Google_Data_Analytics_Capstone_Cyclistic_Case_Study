@@ -78,7 +78,7 @@ Throughout the 12 month period, members account for almost two thirds (63.63%) o
 Cyclistic currently offer three types of rideables: Classic bikes, electric bikes and electric scooters. The following provides a breakdown of how these are used by the two user types:
 
 <p align="center">
-    <img width="1159" height="462" alt="image" src="https://github.com/user-attachments/assets/93dcbe39-3b00-49a6-9a0f-c14daa50ae52" />
+    <img width="1159" height="462" alt="image" src="https://github.com/user-attachments/assets/d45cefc9-8477-4cbf-af18-4a548a13e14c" />
 </p>
 
 The chart shows that electric bikes are the most popular rideable for both types of user.
