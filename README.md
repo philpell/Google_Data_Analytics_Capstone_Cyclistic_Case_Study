@@ -90,13 +90,19 @@ The following three charts provide an overview of the usage by both user types o
     <img width="1163" height="465" alt="image" src="https://github.com/user-attachments/assets/b66a5bf6-0799-4053-863f-075eb37b9c1c" />
 </p>
 
+The annual usage chart shows that the most popular month for both user types is September. There is also a general trend for higher usage between June and September with a drop off to January being the lowest month for both user types.
+
 <p align="center">
     <img width="1163" height="462" alt="image" src="https://github.com/user-attachments/assets/1d1b135f-7527-430e-9922-4424f0e248df" />
 </p>
 
+The weekly usage chart shows a trend for higher usage on Saturday and Sunday for casual riders, whereas member usage is higher between Monday and Friday.
+
 <p align="center">
     <img width="1165" height="463" alt="image" src="https://github.com/user-attachments/assets/a195fda3-948c-47ca-9988-a36e661f8876" />
 </p>
+
+The daily chart shows that casual usage increases throughout the day before peaking and falling at 5pm. Member usage shows two peaks, one at 8am and the highest at 5pm, usage falls between these points but remains higher than casual riders. 
 
 ## Appendix 1 - files
 [combined_trip_data.sql](https://github.com/philpell/Google_Data_Analytics_Capstone_Cyclistic_Case_Study/blob/main/combined_trip_data.sql)
